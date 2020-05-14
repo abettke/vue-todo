@@ -4,8 +4,12 @@
     <h1>
       Vue To-Do
     </h1>
-    <TodoCreate />
-    <TodoList v-bind:todos="todos"/>
+    <section>
+      <TodoCreate />
+    </section>
+    <section>
+      <TodoList v-bind:todos="todos"/>
+    </section>
   </main>
 </template>
 
@@ -41,12 +45,17 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin: 60px;
+  }
+
+  section {
+    width: 35%;
+    margin: 0 auto;
+  }
 </style>
