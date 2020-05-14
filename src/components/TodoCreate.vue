@@ -1,8 +1,7 @@
 <template>
   <form v-on:submit="onSubmit" ref="todoCreateForm">
-    <label for="todo-text">New To-Do</label>
-    <input id="todo-text" v-model="text"/>
-    <input type="submit" value="Add To-Do" />
+    <input v-model="text" placeholder="Add new to-do..."/>
+    <div v-on:click="onSubmit">+</div>
   </form>
 </template>
 
@@ -23,5 +22,26 @@
 </script>
 
 <style scoped>
+  form {
+    display: flex;
+  }
 
+  input{
+    flex: 1 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: .5px solid rgba(0, 0, 0, 0.5);
+  }
+
+  div {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 8px;
+    width: 22px;
+  }
+
+  div:hover {
+    background: rgba(0, 0, 0, .1);
+  }
 </style>
