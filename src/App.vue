@@ -4,8 +4,8 @@
     <h1>
       Vue To-Do
     </h1>
-    <TodoList v-bind:todos="todos"/>
     <TodoCreate />
+    <TodoList v-bind:todos="todos"/>
   </main>
 </template>
 
