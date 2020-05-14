@@ -28,6 +28,9 @@ export default {
         text,
         done: false,
       })
+    },
+    toggleTodo: function(todoIndex) {
+      this.todos[todoIndex].done = !this.todos[todoIndex].done
     }
   },
   components: {
