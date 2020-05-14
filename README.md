@@ -1,5 +1,7 @@
 # vue-todo
 
+A sample practice project to start learning the fundamentals of vue.
+
 ## Project setup
 ```
 yarn install
