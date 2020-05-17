@@ -6,15 +6,18 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex';
+
   export default {
     name: 'TodoCreate',
     data: () => ({
       text: '',
     }),
     methods: {
+      ...mapActions(['addToDo']),
       onSubmit: function(ev) {
         ev.preventDefault();
-        this.$parent.createTodo(this.text);
+        this.addToDo(this.text);
         this.$refs.todoCreateForm.reset();
       }
     }

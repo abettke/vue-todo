@@ -8,7 +8,7 @@
       <TodoCreate />
     </section>
     <section>
-      <TodoList v-bind:todos="todos"/>
+      <TodoList />
     </section>
   </main>
 </template>
@@ -19,24 +19,6 @@ import TodoCreate from './components/TodoCreate';
 
 export default {
   name: 'App',
-  data: () => ({
-    todos: [
-      { text: 'Clean room', done: true },
-      { text: 'Do the dishes', done: false },
-      { text: 'Walk the dog', done: false },
-    ]
-  }),
-  methods: {
-    createTodo: function (text) {
-      this.todos.push({
-        text,
-        done: false,
-      })
-    },
-    toggleTodo: function(todoIndex) {
-      this.todos[todoIndex].done = !this.todos[todoIndex].done
-    }
-  },
   components: {
     TodoList,
     TodoCreate

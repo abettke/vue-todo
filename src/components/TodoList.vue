@@ -3,7 +3,7 @@
     <li
       v-for="(todo, index) in todos"
       v-bind:key="index"
-      v-on:click="toggleTodo(index)"
+      v-on:click="toggleToDo(index)"
       v-bind:class="{ completed: todo.done }"
     >
       {{ todo.text }}
@@ -12,19 +12,12 @@
 </template>
 
 <script>
+  import { mapState, mapActions } from 'vuex'
+
   export default {
     name: 'TodoList',
-    props: {
-      todos: {
-        type: Array,
-        default: () => [],
-      }
-    },
-    methods: {
-      toggleTodo: function (index) {
-        this.$parent.toggleTodo(index);
-      }
-    }
+    computed: mapState(['todos']),
+    methods: mapActions(['toggleToDo'])
   }
 </script>
 
